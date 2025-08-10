@@ -39,6 +39,8 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+      position: relative;
+      top: 10px;
     }
 
     td {
@@ -51,7 +53,15 @@
       background-color: rgba(255,255,255,0.05);
     } */
 
-    /* Form Inputs */
+    
+    table tr:hover {
+  background-color: rgba(255, 70, 85, 0.3); /* Light red transparent */
+  cursor: pointer;
+}
+
+    
+
+    
     input[type="text"], select {
       padding: 10px;
       width: 300px;
@@ -68,6 +78,7 @@
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
+      position: static;
       
     }
 
@@ -108,10 +119,36 @@
       font-size: 0.9rem;
       color: #ffdddd;
     }
+
+    .official-web {
+      position: fixed;
+      top: 2px;
+      right: 11px;
+      background-color: #ff4655;
+      color: white;
+      padding: 3px 2px;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    .float-left {
+      float: left;
+      margin-right: 10px;
+    }
+    
+    .clearfix {
+      clear: both;
+    }
+    
+    
   </style>
 </head>
 <body>
+  <br/>
   <h1>Valorant Information Home Page</h1>
+  <div class="official-web">
+    <a href="https://playvalorant.com/en-us/agents/" class="official-web">Click here for official website</a>
+  </div>
 
   <form>
   <table border="1" cellpadding="10">
@@ -119,8 +156,8 @@
     <tr>
       <td>Search Agent by Name:</td>
       <td>
-          <input type="text" name="query_name" placeholder="Enter agent name (e.g., Skye)">
-          <button type="submit" formaction="skye.html">Search</button>
+          <input class="float-left" type="text" name="query_name" placeholder="Enter agent name (e.g., Skye)">
+          <button class="float-left" type="submit" formaction="skye.html">Search</button>
       </td>
     </tr>
 
@@ -128,8 +165,8 @@
     <tr>
       <td>Search Agent by Role:</td>
       <td>
-          <input type="text" name="query_role" placeholder="Enter agent role (e.g., Duelist)">
-          <button type="submit" formaction="reyna.html">Search</button>
+          <input class="float-left" type="text" name="query_role" placeholder="Enter agent role (e.g., Duelist)">
+          <button class="float-left" type="submit" formaction="reyna.html">Search</button>
       </td>
     </tr>
 
@@ -137,8 +174,8 @@
     <tr>
       <td>Search Agent by Country:</td>
       <td>
-          <input type="text" name="query_country" placeholder="Enter agent country (e.g., France)">
-          <button type="submit" formaction="chamber.html">Search</button>
+          <input class="float-left" type="text" name="query_country" placeholder="Enter agent country (e.g., France)">
+          <button class="float-left" type="submit" formaction="chamber.html">Search</button>
       </td>
     </tr>
 
@@ -179,9 +216,21 @@
           <option>Abyss</option>
         </select>
         <div id="mapInfo"></div>
+        
       </td>
     </tr>
-
+    <!-- Date and Time Selection -->
+    <tr>
+      <td>Select Match Date & Time:</td>
+      <td>
+        <label for="matchDate">Date:</label>
+        <input type="date" id="matchDate" name="match_date">
+    
+        <label for="matchTime">Time:</label>
+        <input type="time" id="matchTime" name="match_time">
+      </td>
+    </tr>
+    
     <!-- Button to clear all inputs -->
     <tr>
       <td>Clear All Inputs:</td>

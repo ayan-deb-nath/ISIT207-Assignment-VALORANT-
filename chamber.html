@@ -2,95 +2,11 @@
 <html>
 <head>
     <title>Chamber - Agent Details</title>
+    <link rel="stylesheet" href="agent.css">
     <style>
-
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            opacity: 1;
+        body{
+            background-image: url('chamberbg.jpg');
         }
-        body {
-            background-image: url('chamberbg.jpg'); 
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: white;
-        }
-
-        .wrapper {
-            background-color: rgba(0, 0, 0, 0.6); /* semi-transparent bg for readability */
-            padding: 20px;
-            margin: 30px auto;
-            max-width: 800px;
-            border-radius: 10px;
-        }
-
-        .display-box {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin-top: 15px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-        }
-
-        .ability-description {
-            display: none;
-        }
-
-        /* Use .wrapper to scope everything together */
-        #ability1:checked ~ .display-box #desc1,
-        #ability2:checked ~ .display-box #desc2,
-        #ability3:checked ~ .display-box #desc3,
-        #ability4:checked ~ .display-box #desc4 {
-            display: block;
-        }
-
-        label {
-            display: inline-block;
-            margin-right: 15px;
-            cursor: pointer;
-        }
-
-        .home-button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #28a745; /* greenish */
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-    }
-    
-    .home-button:hover {
-        background-color: #218838;
-    }
-
-    .button-group {
-    text-align: center;
-    margin-top: 20px;
-    }
-    
-    .official-button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-        margin-left: 10px;
-    }
-    
-    .official-button:hover {
-        background-color: #0056b3;
-    }
-    
-    
     </style>
 </head>
 <body>
@@ -137,8 +53,8 @@
                 <a href="index.html" class="home-button">Back to Home</a>
                 <a href="https://playvalorant.com/en-us/agents/chamber/" class="official-button">Visit Official Website for Chamber</a>
             </div>
-            
-    
-    </div>
+        </div>
+
+        <img src="chamberthumb.jpg" alt="Chamber Thumbnail" class="thumbnail">
 </body>
 </html>
