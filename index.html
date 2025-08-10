@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valorant Information Home Page</title>
+  <style>
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+      background: url('valorantbg.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      backdrop-filter: blur(1px);
+    }
+
+    h1 {
+  text-align: center;
+  font-size: 4rem;          
+  margin-top: 30px;
+  letter-spacing: 4px;      
+  text-shadow:
+    3px 3px 8px rgba(0,0,0,0.9),
+    0 0 10px #ff4655,
+    0 0 20px #ff4655;
+  font-weight: 900;         
+  font-family: 'Segoe UI Black', 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  color: #ff4655;           
+}
+
+
+    /* Table Styling */
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 30px auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+    }
+
+    td {
+      padding: 15px;
+      font-size: 1rem;
+      vertical-align: middle;
+    }
+
+    /* tr:nth-child(even) {
+      background-color: rgba(255,255,255,0.05);
+    } */
+
+    /* Form Inputs */
+    input[type="text"], select {
+      padding: 10px;
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff4655;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      
+    }
+
+    button:hover {
+      background-color: #e03b49;
+    }
+
+    /* Checkboxes */
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 8px;
+      cursor: pointer;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    /* Agent List Styling */
+    .agent-list {
+      display: none;
+      margin-top: 5px;
+      font-weight: bold;
+      color: #ff9e9e;
+    }
+
+    #male:checked ~ .male-agents {
+      display: block;
+    }
+
+    #female:checked ~ .female-agents {
+      display: block;
+    }
+
+    /* Map Info */
+    #mapInfo {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #ffdddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Valorant Information Home Page</h1>
+
+  <form>
+  <table border="1" cellpadding="10">
+    <!-- Search Agent by Name -->
+    <tr>
+      <td>Search Agent by Name:</td>
+      <td>
+          <input type="text" name="query_name" placeholder="Enter agent name (e.g., Skye)">
+          <button type="submit" formaction="skye.html">Search</button>
+      </td>
+    </tr>
+
+    <!-- Search Agent by Role -->
+    <tr>
+      <td>Search Agent by Role:</td>
+      <td>
+          <input type="text" name="query_role" placeholder="Enter agent role (e.g., Duelist)">
+          <button type="submit" formaction="reyna.html">Search</button>
+      </td>
+    </tr>
+
+    <!-- Search Agent by Country -->
+    <tr>
+      <td>Search Agent by Country:</td>
+      <td>
+          <input type="text" name="query_country" placeholder="Enter agent country (e.g., France)">
+          <button type="submit" formaction="chamber.html">Search</button>
+      </td>
+    </tr>
+
+    <!-- Gender Checkboxes -->
+    <tr>
+      <td>Agent names by Gender:</td>
+      <td>
+        <div class="section">
+          <span>Gender:</span><br>
+          
+          <input type="checkbox" id="male" name="gender" value="Male">
+          <label for="male">Male</label><br>
+          
+          <input type="checkbox" id="female" name="gender" value="Female">
+          <label for="female">Female</label>
+
+          <div class="agent-list male-agents">Chamber</div>
+          <div class="agent-list female-agents">Skye, Reyna</div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- Map List -->
+    <tr>
+      <td>Select Map:</td>
+      <td>
+        <select id="mapSelect" name="map">
+          <option disabled selected>List of the Maps</option>
+          <option>Ascent</option>
+          <option>Bind</option>
+          <option>Haven</option>
+          <option>Icebox</option>
+          <option>Split</option>
+          <option>Fracture</option>
+          <option>Pearl</option>
+          <option>Lotus</option>
+          <option>Sunset</option>
+          <option>Abyss</option>
+        </select>
+        <div id="mapInfo"></div>
+      </td>
+    </tr>
+
+    <!-- Button to clear all inputs -->
+    <tr>
+      <td>Clear All Inputs:</td>
+      <td>
+        <button type="reset">Clear</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+</body>
+</html>

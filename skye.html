@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skye - Agent Details</title>
+    <style>
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            opacity: 1;
+        }
+        body {
+            background-image: url('skyebg.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .wrapper {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+
+        .display-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .ability-description {
+            display: none;
+        }
+
+        /* Use .wrapper to scope everything together */
+        #ability1:checked ~ .display-box #desc1,
+        #ability2:checked ~ .display-box #desc2,
+        #ability3:checked ~ .display-box #desc3,
+        #ability4:checked ~ .display-box #desc4 {
+            display: block;
+        }
+
+        label {
+            display: inline-block;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .home-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    
+    .home-button:hover {
+        background-color: #218838;
+    }
+
+    .button-group {
+    text-align: center;
+    margin-top: 20px;
+    }
+    
+    .official-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        margin-left: 10px;
+    }
+    
+    .official-button:hover {
+        background-color: #0056b3;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Skye - Valorant Agent</h1>
+
+        <p>Hailing from Australia, Skye and her band of beasts trail-blaze the way through hostile territory. With her creations hampering the enemy, and her power to heal others, the team is strongest and safest by Skye’s side.</p>
+
+        <input type="radio" id="ability1" name="ability" checked>
+        <label for="ability1">Regrowth</label>
+
+        <input type="radio" id="ability2" name="ability">
+        <label for="ability2">Trailblazer</label>
+
+        <input type="radio" id="ability3" name="ability">
+        <label for="ability3">Guiding Light</label>
+
+        <input type="radio" id="ability4" name="ability">
+        <label for="ability4">Seekers (Ultimate)</label>
+
+        <div class="display-box">
+            <div class="ability-description" id="desc1">
+                <img src="regrowth.jpg" alt="Regrowth" style="width: 500px;" height=""><br>
+                <p><strong>Regrowth:</strong> EQUIP a healing trinket. HOLD FIRE to channel, healing allies in range and line of sight. Can be reused until her healing pool is depleted. Skye cannot heal herself.</p>
+            </div>
+
+            <div class="ability-description" id="desc2">
+                <img src="trailblazer.jpg" alt="Trailblazer" style="width:500px;"><br>
+                <p><strong>Trailblazer:</strong> EQUIP a Tasmanian tiger trinket. FIRE to send out and take control of the predator. While in control, FIRE to leap forward, exploding in a concussive blast and damaging directly hit enemies.</p>
+            </div>
+
+            <div class="ability-description" id="desc3">
+                <img src="guidinglight.jpg" alt="Guiding Light" style="width:500px;"><br>
+                <p><strong>Guiding Light:</strong> EQUIP a hawk trinket. FIRE to send it forward. HOLD FIRE to guide the hawk in the direction of your crosshair. RE-USE while the hawk is in flight to transform it into a flash.</p>
+            </div>
+
+            <div class="ability-description" id="desc4">
+                <img src="seekers.jpg" alt="Seekers" style="width:500px;"><br>
+                <p><strong>Seekers (Ultimate):</strong> EQUIP a Seeker trinket. FIRE to send out three Seekers to track down the three closest enemies. If a Seeker reaches its target, it Nearsights them. Enemies can destroy the Seekers.</p>
+            </div>
+        </div>
+            <div class="button-group">
+                <a href="index.html" class="home-button">Back to Home</a>
+                <a href="https://playvalorant.com/en-us/agents/skye/" class="official-button">Visit Official Website for Skye</a>
+            </div>
+            
+    
+    </div>
+</body>
+</html>
